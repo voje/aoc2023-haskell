@@ -8,5 +8,6 @@ data Point = Point Double Double deriving(Show, Eq)
 (Point x1 y1) `psub` (Point x2 y2) = Point (x1 - x2) (y1 - y2)
 (Point x1 y1) `pmul` (Point x2 y2) = Point (x1 * x2) (y1 * y2)
 
+pdist :: Point -> Point -> Double
 pdist (Point x1 y1) (Point x2 y2) =
     sqrt((x2 - x1)^2 + (y2 - y1)^2)
